@@ -13,6 +13,7 @@ You can play videos as Ads like IMA SDK.
 
 <li> this.fixedAdsLoader = new FixedAdsLoader(activity);</li>
 <li>{
+        ```gradle
         player = new SimpleExoPlayer.Builder(activity.getApplication()).setMediaSourceFactory(mediaSourceFactory).build();
         Uri contentUri = Uri.parse(contentUrl);
         Uri adTagUri = Uri.parse(FIXED_ADS_TAG);
@@ -22,6 +23,7 @@ You can play videos as Ads like IMA SDK.
         MediaItem mediaItem = new MediaItem.Builder().setUri(contentUri).setAdTagUri(adTagUri).build();
         fixedAdsLoader.setPlayer(player);
         playerView.setPlayer(player);
+        ```
 }
 </li>
 </ul>
