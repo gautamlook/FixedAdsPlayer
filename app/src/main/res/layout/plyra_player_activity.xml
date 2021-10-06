@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2017 The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+--><!--
+<com.google.android.exoplayer2.ui.PlayerView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:appProfile="http://schemas.android.com/apk/res-auto"
+android:id="@+id/player_view"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+appProfile:controller_layout_id="@layout/media_controller_view_exoplayer"
+android:keepScreenOn="true" />
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appProfile="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+    <!--ExoLib Elements-->
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        appProfile:controller_layout_id="@layout/media_controller_view_exoplayer"
+        appProfile:fastforward_increment="30000"
+        appProfile:rewind_increment="30000"
+        appProfile:scrubber_color="@color/lb_speech_orb_recording"
+        appProfile:show_timeout="5000" />
+
+    <FrameLayout
+        android:id="@+id/ad_ui_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <!--Lib Ends-->
+    <!--developer define elements-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null">
+
+        <!-- <LinearLayout
+        android:id="@+id/controls_root"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#88000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" />-->
+        <ImageView
+            android:id="@+id/iv__play_pause"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/selector_btn_play"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_next_video_overlay_info"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/controls_root"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/trans_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/tv_next_video_overlay_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                tools:text="Next" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/controls_root"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="#88000000"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/select_tracks_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="false"
+                android:paddingStart="7dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="7dp"
+                android:paddingBottom="3dp"
+                android:text="track_selection_title" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_exo_player"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/circular_progress_bar_player" />
+
+        <TextView
+            android:id="@+id/adsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="8dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="-2"
+            android:shadowDy="-2"
+            android:shadowRadius="1"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/skipAds"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border"
+            android:layout_marginBottom="15dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:text=""
+                android:textStyle="normal"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:background="@color/transparent"
+                android:layout_height="30dp">
+
+            </Button>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/rootBr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99233B67"
+        android:visibility="gone" />
+</FrameLayout>

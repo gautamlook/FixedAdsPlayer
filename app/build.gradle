@@ -1,0 +1,40 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.look.fixedadsplayer"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+ext {
+    exoplayerVersion = '2.13.3'
+}
+dependencies {
+
+    implementation 'androidx.leanback:leanback:1.0.0'
+    /*Exo-Player Libraries*/
+    implementation "com.amazon.android:exoplayer:$exoplayerVersion"
+    implementation "com.amazon.android:exoplayer-core:$exoplayerVersion"
+    implementation "com.amazon.android:exoplayer-hls:$exoplayerVersion"
+    implementation "com.amazon.android:exoplayer-dash:$exoplayerVersion"
+    implementation "com.amazon.android:exoplayer-smoothstreaming:$exoplayerVersion"
+    implementation "com.amazon.android:exoplayer-ui:$exoplayerVersion"
+    implementation "com.amazon.android:extension-gvr:$exoplayerVersion"
+    implementation "com.amazon.android:extension-ima:$exoplayerVersion"
+    implementation project(path: ':FixedAdsLoader')
+}
