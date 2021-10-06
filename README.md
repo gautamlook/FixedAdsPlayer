@@ -11,8 +11,29 @@ You can play videos as Ads like IMA SDK.
 <li>Skip button is working when video length greater then 30 second</li>
 <li>Enjoy it.</li>
        </ul> 
-  
-  ```java
+
+To get a Git project into your build:
+Add it in your root build.gradle at the end of repositories:
+```
+Step 1. Add the JitPack repository to your build file 
+
+  allprojects {
+		repositories {
+			...
+			maven { url 'https://www.jitpack.io' }
+		}
+	}
+ ```
+ ```
+Step 2. Add the dependency   
+    
+    dependencies {
+	        implementation 'com.github.gautamlook:FixedAdsPlayer:v1.0'
+	}
+ 
+ ``` 
+ 
+     ```
         this.fixedAdsLoader = new FixedAdsLoader(activity);
         player = new SimpleExoPlayer.Builder(activity.getApplication()).setMediaSourceFactory(mediaSourceFactory).build();
         // Media url
@@ -28,9 +49,7 @@ You can play videos as Ads like IMA SDK.
         fixedAdsLoader.setPlayer(player);
         playerView.setPlayer(player);
         ```
-
-
-        
+ 
 Result
 Ad with time elapse
 ![track_location_device_devdeeds](https://raw.githubusercontent.com/gautamlook/FixedAdsPlayer/main/ad2.png)
