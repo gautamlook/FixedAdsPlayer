@@ -31,12 +31,9 @@ You can play videos as Ads like IMA SDK.
 
 
         
-
-
 Result
+Ad with time elapse
+![track_location_device_devdeeds](https://raw.githubusercontent.com/gautamlook/FixedAdsPlayer/main/ad2.png)
+Ad with skip button
+![track_location_device_devdeeds](https://raw.githubusercontent.com/gautamlook/FixedAdsPlayer/main/ad3.png)
 
-![track_location_device_devdeeds](https://raw.githubusercontent.com/gautamlook/LocationTracker/main/device-2021-09-19-121719.png)
-
-![track_location_device_devdeeds](https://raw.githubusercontent.com/gautamlook/LocationTracker/main/device-2021-09-19-121742.png)
-
-![track_location_device_devdeeds](https://raw.githubusercontent.com/gautamlook/LocationTracker/main/device-2021-09-19-124427.png)
