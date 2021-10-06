@@ -98,14 +98,12 @@ public final class PlayerActivitySimpleAds extends BaseFragmentActivity implemen
         setting.setVisibility(View.GONE);
         videoQuility = findViewById(R.id.videoQuility);
         top_rel = findViewById(R.id.top);
-        feedUrl = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4";//getIntent().getExtras().getString("CALL_FROM_ACTIVITY");
-        title = "";//getIntent().getExtras().getString("TITLE");
-        startAds = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4";//getIntent().getExtras().getString(VAST_URL);
-        midAds = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4";//getIntent().getExtras().getString(VAST_URL);
-        endAds = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4";//getIntent().getExtras().getString(VAST_URL);
-        //midAds = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4";//getIntent().getExtras().getString(VAST_URL);
-        //TextView topTitle =findViewById(R.id.topTitle);
-        // topTitle.setText(title);
+        feedUrl = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4";
+        title = "";
+        startAds = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4";
+        midAds = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4";
+        endAds = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4";
+
         try {
             feedUrl = feedUrl.trim();
         } catch (Exception e) {
