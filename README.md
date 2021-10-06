@@ -28,7 +28,7 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency   
     
     dependencies {
-	        implementation 'com.github.gautamlook:FixedAdsPlayer:v1.0'
+	        implementation 'com.github.gautamlook:FixedAdsPlayer:FixedAdsPlayer'
 	}
  
  ``` 
