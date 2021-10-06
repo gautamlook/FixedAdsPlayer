@@ -10,17 +10,19 @@ You can play videos as Ads like IMA SDK.
 <li>You can play Ads on start ,mid and end position</li>
 <li>Skip button is working when video length greater then 30 second</li>
 <li>Enjoy it.</li>
-        </ul>
-      ```
-this.fixedAdsLoader = new FixedAdsLoader(activity);
-```
-        
-        ```
+       </ul> 
+  
+  ```java
+        this.fixedAdsLoader = new FixedAdsLoader(activity);
         player = new SimpleExoPlayer.Builder(activity.getApplication()).setMediaSourceFactory(mediaSourceFactory).build();
+        // Media url
         Uri contentUri = Uri.parse(contentUrl);
         Uri adTagUri = Uri.parse(FIXED_ADS_TAG);
+        // First video url for ad
         fixedAdsLoader.startAdsUrl(start);
+         // second video url for ad
         fixedAdsLoader.midAdsUrl(midUrl, 0);
+         // third video url for ad
         fixedAdsLoader.endAdsUrl(endUrl);
         MediaItem mediaItem = new MediaItem.Builder().setUri(contentUri).setAdTagUri(adTagUri).build();
         fixedAdsLoader.setPlayer(player);
